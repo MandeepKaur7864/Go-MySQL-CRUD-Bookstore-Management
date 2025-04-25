@@ -80,8 +80,8 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	if book.Publication != "" {
 		book_details.Publication = book.Publication
 	}
-	db.Save(&book)
-	res, _ := json.Marshal(book)
+	db.Save(&book_details)
+	res, _ := json.Marshal(book_details)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(res)
