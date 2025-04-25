@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "99b920e5-4d50-4f4c-86f9-2b3ec0f46d03",
+		"name": "Bookstore Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43236001"
+	},
+	"item": [
+		{
+			"name": "Get all Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getBooks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getBooks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Books",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getBooks",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getBooks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Apr 2025 01:47:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "521"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"ID\": 1,\n        \"CreatedAt\": \"2025-04-25T07:15:42+05:30\",\n        \"UpdatedAt\": \"2025-04-25T07:15:42+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Zero to One\",\n        \"author\": \"John Doe\",\n        \"publication\": \"Penguin\"\n    },\n    {\n        \"ID\": 2,\n        \"CreatedAt\": \"2025-04-25T07:16:27+05:30\",\n        \"UpdatedAt\": \"2025-04-25T07:16:27+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"One to Zero\",\n        \"author\": \"Jane Doe\",\n        \"publication\": \"Penguin 1\"\n    },\n    {\n        \"ID\": 3,\n        \"CreatedAt\": \"2025-04-25T07:16:57+05:30\",\n        \"UpdatedAt\": \"2025-04-25T07:16:57+05:30\",\n        \"DeletedAt\": null,\n        \"name\": \"Two to Three\",\n        \"author\": \"Justin Doe\",\n        \"publication\": \"Penguin 2\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Book By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getBookById/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getBookById",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Book By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getBookById/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getBookById",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Apr 2025 01:47:47 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 2,\n    \"CreatedAt\": \"2025-04-25T07:16:27+05:30\",\n    \"UpdatedAt\": \"2025-04-25T07:16:27+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"One to Zero\",\n    \"author\": \"Jane Doe\",\n    \"publication\": \"Penguin 1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create a Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Two to Three\",\r\n    \"Author\": \"Justin Doe\",\r\n    \"Publication\": \"Penguin 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/createBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"createBook"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create a Book",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Two to Three\",\r\n    \"Author\": \"Justin Doe\",\r\n    \"Publication\": \"Penguin 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createBook",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createBook"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Apr 2025 01:46:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "191"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 3,\n    \"CreatedAt\": \"2025-04-25T07:16:57.3179463+05:30\",\n    \"UpdatedAt\": \"2025-04-25T07:16:57.3179463+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"Two to Three\",\n    \"author\": \"Justin Doe\",\n    \"publication\": \"Penguin 2\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update a Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"One to Two\",\r\n    \"author\": \"Jane Doe\",\r\n    \"publication\": \"Penguin 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/updateBook/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateBook",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update a Book",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"One to Two\",\r\n    \"author\": \"Jane Doe\",\r\n    \"publication\": \"Penguin 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/updateBook/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateBook",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Apr 2025 01:50:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 4,\n    \"CreatedAt\": \"2025-04-25T07:20:44.7107483+05:30\",\n    \"UpdatedAt\": \"2025-04-25T07:20:44.7107483+05:30\",\n    \"DeletedAt\": null,\n    \"name\": \"One to Two\",\n    \"author\": \"Jane Doe\",\n    \"publication\": \"Penguin 1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete a Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/deleteBook/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deleteBook",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a Book",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteBook/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteBook",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 25 Apr 2025 01:51:09 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "134"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ID\": 0,\n    \"CreatedAt\": \"0001-01-01T00:00:00Z\",\n    \"UpdatedAt\": \"0001-01-01T00:00:00Z\",\n    \"DeletedAt\": null,\n    \"name\": \"\",\n    \"author\": \"\",\n    \"publication\": \"\"\n}"
+				}
+			]
+		}
+	]
+}
